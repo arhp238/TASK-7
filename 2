@@ -1,0 +1,32 @@
+#include <iostream>
+ 
+using namespace std;
+
+void deerminePosNeg(int *number);
+
+int main()
+{
+    int userNumber;
+    cout << "введите номер: ";
+    cin >> userNumber;
+    
+    int* pUserNumber = &userNumber;
+    deerminePosNeg(pUserNumber);    
+}
+
+void deerminePosNeg(int* number)
+{
+    cout << "номер " << *number;
+    if (*number > 0)
+    {
+        cout << " = положительное" << endl;
+    }
+    else if (*number < 0)
+    {
+        cout << " = отрицательное" << endl;
+    }
+    else
+    {
+        cout << " = нулю" << endl;
+    }
+}
